@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var sudoku_js_1 = require("./sudoku.js");
+var input = "\n---------------------------\n|| 0 0 4 | 0 5 0 | 0 0 0 ||\n|| 9 0 0 | 7 3 4 | 6 0 0 ||\n|| 0 0 3 | 0 2 1 | 0 4 9 ||\n---------------------------\n|| 0 3 5 | 0 9 0 | 4 8 0 ||\n|| 0 9 0 | 0 0 0 | 0 3 0 ||\n|| 0 7 6 | 0 1 0 | 9 2 0 ||\n---------------------------\n|| 3 1 0 | 9 7 0 | 2 0 0 ||\n|| 0 0 9 | 1 8 2 | 0 0 3 ||\n|| 0 0 0 | 0 6 0 | 1 0 0 ||\n---------------------------\n";
+console.log("Input Sudoku is ...");
+console.log(input);
+var sudoku001 = new sudoku_js_1.Sudoku();
+sudoku001.decodeSudokuInputString(input);
+sudoku001.solve();
+await console.log("Solved Suduko is Here..");
+await console.log(sudoku001.printSuduko());
